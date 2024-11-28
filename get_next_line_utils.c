@@ -6,7 +6,7 @@
 /*   By: icunha-t <icunha-t@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 16:15:58 by icunha-t          #+#    #+#             */
-/*   Updated: 2024/11/27 18:07:24 by icunha-t         ###   ########.fr       */
+/*   Updated: 2024/11/28 12:01:53 by icunha-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ char	*ft_substr(char *line_buffer, int start, int len)
 	if (!line_buffer)
 		return (NULL);
 	s_len = ft_strlen(line_buffer);
-	if (start >= s_len)
-		return (ft_strdup(""));
+	if (start > s_len)
+		return (malloc(1));
 	if (len > s_len - start)
 		len = s_len - start;
 	string = malloc(sizeof(char) * (len + 1));
